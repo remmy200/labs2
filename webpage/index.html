@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chef Maureen Laura</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdf6f0;
+    color: #3a2e2a;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 24px;
+}
+
+.navbar nav a {
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: 300;
+    transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #d4a373;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('images/hero-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+/* SECTIONS */
+.food-section {
+    padding: 100px 10%;
+}
+
+.category-title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 32px;
+    border-left: 5px solid #d4a373;
+    padding-left: 10px;
+}
+
+/* GRID */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* FOOD ITEMS */
+.food-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.food-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.food-item:hover img {
+    transform: scale(1.1);
+}
+
+/* OVERLAY */
+.food-item::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.food-item:hover::after {
+    opacity: 1;
+}
+
+/* ABOUT */
+.about {
+    padding: 100px 10%;
+}
+
+.about p {
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+/* BOOKING */
+.booking {
+    padding: 100px 10%;
+    background: #3a2e2a;
+    color: white;
+    text-align: center;
+}
+
+.booking h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+}
+
+.booking a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #d4a373;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+/* COLORS */
+.food-section:nth-of-type(1){background:#fff4e6;}
+.food-section:nth-of-type(2){background:#ffe6d1;}
+.food-section:nth-of-type(3){background:#ffe6f0;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Maureen Laura</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <h1>Maureen Laura</h1>
+    <p>Luxury Catering • Elevated Flavors • Unforgettable Taste</p>
+</section>
+
+<!-- MENU -->
+<section class="food-section" id="menu">
+
+<h2 class="category-title">Carbohydrates</h2>
+<div class="food-grid">
+<div class="food-item" data-name="Fried Rice"><img src="images/fried-rice.jpg"></div>
+<div class="food-item" data-name="Vegetable Rice"><img src="images/vegetable-rice.jpg"></div>
+<div class="food-item" data-name="Pilau"><img src="images/pilau.jpg"></div>
+<div class="food-item" data-name="Chapati"><img src="images/chapati.jpg"></div>
+<div class="food-item" data-name="Potato Wedges"><img src="images/potato-wedges.jpg"></div>
+<div class="food-item" data-name="Potato Saute"><img src="images/potato-saute.jpg"></div>
+</div>
+
+<h2 class="category-title">Proteins</h2>
+<div class="food-grid">
+<div class="food-item" data-name="Fried Chicken"><img src="images/fried-chicken.jpg"></div>
+<div class="food-item" data-name="Roasted Chicken"><img src="images/roasted-chicken.jpg"></div>
+<div class="food-item" data-name="BBQ Ribs"><img src="images/BBQ-ribs.jpg"></div>
+<div class="food-item" data-name="BBQ Pork"><img src="images/BBQ-pork.jpg"></div>
+<div class="food-item" data-name="Gravy Beef"><img src="images/gravy-beef.jpg"></div>
+</div>
+
+<h2 class="category-title">Bites & Pastries</h2>
+<div class="food-grid">
+<div class="food-item" data-name="Maandazi"><img src="images/maandazi.jpg"></div>
+<div class="food-item" data-name="Samosa"><img src="images/samosa.jpg"></div>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+<h2 class="category-title">About Chef Maureen</h2>
+<p>
+Chef Maureen Laura creates unforgettable dining experiences blending tradition and creativity.
+Her passion for flavor, presentation, and excellence ensures every event feels special.
+</p>
+</section>
+
+<!-- CONTACT -->
+<section class="booking" id="contact">
+<h2>Book Chef Maureen</h2>
+<p>Available for catering, events, and private dining experiences.</p>
+<a href="#">Book Now</a>
+</section>
+
+<!-- ANIMATION -->
+<script>
+const items = document.querySelectorAll('.food-item');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.opacity = '1';
+        }
+    });
+});
+
+items.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>
