@@ -1,95 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome page</title>
+    <title>Welcome Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #eef2f7;
+        }
+
+        /* NAVBAR */
+        .toplinks {
+            background-color: #373737;
+            overflow: hidden;
+        }
+
+        .toplinks a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .toplinks a:hover {
+            background-color: #f2f2f2;
+            color: #373737;
+        }
+
+        /* BANNER */
+        .banner {
+            background-color: #da9999;
+            padding: 40px;
+            text-align: center;
+            color: #373737;
+        }
+
+        /* LAYOUT */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .content {
+            float: left;
+            width: 70%;
+            padding: 20px;
+        }
+
+        .sidebar {
+            float: left;
+            width: 30%;
+            padding: 20px;
+            border-left: 1px solid #373737;
+            background-color: #f9f9f9;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: #373737;
+            text-align: center;
+            color: #f2f2f2;
+            padding: 20px;
+            font-size: small;
+        }
+
+        /* LIST STYLING */
+        ul {
+            list-style-type: circle;
+        }
+    </style>
 </head>
-<style>
-    .toplinks{
-        background-color: #373737;
-        overflow: hidden;
 
-    }
-    .toplinks a{
-        float: left;
-        background-color: #373737;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-         }
-
-    .toplinks a:hover{
-        background-color: #f2f2f2;
-        color: #373737;
-        text-decoration: none;
-    }
-</style>
 <body>
 
+   
     <div class="toplinks">
-      <a href="./">Home</a> 
-      <a href="About.html">About Me</a> 
-      <a href="projects.html">Projects</a> 
-      <a href="Contact.html">Contact Us</a>
-     </div>
+        <a href="./">Home</a>
+        <a href="About.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="Contact.html">Contact Us</a>
+    </div>
 
-     <div class ="banner"></div>
-     <div class ="row">
-        <div class ="Content">
-            <h1>Our Project</h1>
-        </div>
-        <div class = "Sidebar">Side bar</div>
+   
+    <div class="banner">
+        <h1>Welcome to My Website</h1>
+        <p>Explore my projects and learn more about me</p>
+    </div>
 
-     </div>
-
-     <div class="Footer"></div>
-
-
-    <h1>Welcome to my website</h1>
-    <h2>Get to learn more about me</h2>
-    <p>My name is John Doe, and I am a software developer with a passion for creating innovative solutions. 
-        <br>
-        <hr>
-    I have experience in various programming languages and enjoy working on both front-end and back-end development projects.</p>
-    <p>I also enjoy watching football and passionate about hockey
-        <br>
-        i love to watch movies and listen to music in my free time.
-         I am always eager to learn new technologies and improve my skills in the field of software development.
-    </p>
-    <ul type="circle">
-        <li>Football</li>
-        <li>Hockey</li>
-        <li>Movies</li>
-        <li>Music</li>
-    </ul>
-
-    <ol type="i" start="13">
-        <li>red</li>
-        <li>green</li>
-        <li>blue</li>
-    </ol>
     
-    <dl>
-        <dt>HTML</dt>
-        <dd>hyper text mark up language</dd>
-        <dt>CSS</dt>
-        <dd>Cascading <strong>Style Sheets</strong></dd>
-        <dt>JavaScript</dt>
-        <dd>A <u>programming language</u> for <i>web development</i></dd>
+    <div class="row">
+        <div class="content">
+            <h1>Our Project</h1>
 
+            <h2>Get to learn more about me</h2>
+            <p>
+                My name is John Doe, and I am a software developer with a passion for creating innovative solutions.
+            </p>
+            <hr>
+            <p>
+                I have experience in various programming languages and enjoy working on both front-end and back-end development projects.
+            </p>
 
-    </dl>
+            <p>
+                I also enjoy watching football and am passionate about hockey.<br>
+                I love to watch movies and listen to music in my free time.
+                I am always eager to learn new technologies and improve my skills.
+            </p>
 
-    &copy; 2024 John Doe. All rights reserved. <br>
-    &reg; 2024 John Doe. All rights reserved. <br>
-    &trade; 2024 John Doe. All rights reserved. <br>  
-    &hearts; 2024 John Doe. All rights reserved. <br> 
+            <ul>
+                <li>Football</li>
+                <li>Hockey</li>
+                <li>Movies</li>
+                <li>Music</li>
+            </ul>
 
-    <div>
-        <h1>Stucture content on a webpage</h1>
+            <ol type="i" start="13">
+                <li>Red</li>
+                <li>Green</li>
+                <li>Blue</li>
+            </ol>
+
+            <dl>
+                <dt>HTML</dt>
+                <dd>Hyper Text Markup Language</dd>
+
+                <dt>CSS</dt>
+                <dd>Cascading <strong>Style Sheets</strong></dd>
+
+                <dt>JavaScript</dt>
+                <dd>A <u>programming language</u> for <i>web development</i></dd>
+            </dl>
+        </div>
+
+        
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Quick links or extra info can go here.</p>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        &copy; 2024 John Doe. All rights reserved. <br>
+        &reg; 2024 John Doe. All rights reserved. <br>
+        &trade; 2024 John Doe. All rights reserved. <br>
+        &hearts; Made with passion
     </div>
 
 </body>
